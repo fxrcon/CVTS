@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work | CVTS - FXR Construction Inc.</title>
+    <style>
+        :root { --primary: #002d62; --secondary: #f39c12; --accent: #2c3e50; --light: #f4f7f6; --white: #ffffff; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: #333; background: var(--light); line-height: 1.6; }
+        
+        nav { background: #1a1a1a; padding: 15px; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 0 20px; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
+        nav a:hover { color: var(--secondary); }
+
+        header { background: var(--primary); color: white; padding: 25px; text-align: center; border-bottom: 5px solid var(--secondary); }
+        
+        .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
+        h3 { color: var(--primary); text-align: center; font-size: 1.8rem; margin-bottom: 30px; border-bottom: 2px solid var(--secondary); display: inline-block; width: 100%; padding-bottom: 10px; }
+
+        /* Photo Gallery Grid */
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; }
+        .photo-card { background: white; padding: 10px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
+        .photo-card img { width: 100%; height: 250px; object-fit: cover; border-radius: 3px; background: #ddd; }
+        .photo-card p { margin-top: 10px; font-weight: bold; color: var(--accent); }
+
+        footer { text-align: center; padding: 20px; background: #ddd; margin-top: 40px; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="photos.html">Photos</a>
+</nav>
+
+<header>
+    <h1>Project Gallery</h1>
+</header>
+
+<div class="container">
+    <h3>Our Recent Work</h3>
+    <div class="gallery-grid">
+        <div class="photo-card">
+            <img src="https://via.placeholder.com/400x300?text=Mobile+Home+Turnover" alt="Project 1">
+            <p>Mobile Home Turnover</p>
+        </div>
+        <div class="photo-card">
+            <img src="https://via.placeholder.com/400x300?text=Retail+Storefront" alt="Project 2">
+            <p>Retail Storefront Repair</p>
+        </div>
+        <div class="photo-card">
+            <img src="https://via.placeholder.com/400x300?text=ADA+Compliance" alt="Project 3">
+            <p>ADA Ramp Installation</p>
+        </div>
+        <div class="photo-card">
+            <img src="https://via.placeholder.com/400x300?text=Office+Remodel" alt="Project 4">
+            <p>Office Interior Remodel</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 FXR Construction Inc. | Central Valley Turnkey Services (CVTS)</p>
+</footer>
+
+</body>
+</html>
