@@ -3,27 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Work | CVTS - FXR Construction Inc.</title>
+    <title>Our Work | Central Valley Turnkey Services</title>
     <style>
-        :root { --primary: #002d62; --secondary: #f39c12; --accent: #2c3e50; --light: #f4f7f6; --white: #ffffff; }
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: #333; background: var(--light); line-height: 1.6; }
+        :root { 
+            --primary: #002d62; 
+            --secondary: #f39c12; 
+            --accent: #2c3e50; 
+            --light: #f4f7f6; 
+            --white: #ffffff; 
+        }
+
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            margin: 0; 
+            color: #333; 
+            background: var(--light); 
+            line-height: 1.6; 
+        }
         
-        nav { background: #1a1a1a; padding: 15px; text-align: center; }
-        nav a { color: white; text-decoration: none; margin: 0 20px; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
+        /* Navigation Styles */
+        nav { background: #1a1a1a; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
         nav a:hover { color: var(--secondary); }
 
-        header { background: var(--primary); color: white; padding: 25px; text-align: center; border-bottom: 5px solid var(--secondary); }
-        
-        .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
-        h3 { color: var(--primary); text-align: center; font-size: 1.8rem; margin-bottom: 30px; border-bottom: 2px solid var(--secondary); display: inline-block; width: 100%; padding-bottom: 10px; }
+        /* Branding Header */
+        header { 
+            background: var(--primary); 
+            color: white; 
+            padding: 30px 20px; 
+            text-align: center; 
+            border-bottom: 5px solid var(--secondary); 
+        }
+        header h1 { margin: 0; font-size: 2.2rem; letter-spacing: 1px; text-transform: uppercase; }
+
+        .container { max-width: 1100px; margin: auto; padding: 50px 20px; }
+        h2 { 
+            color: var(--primary); 
+            text-align: center; 
+            font-size: 1.8rem; 
+            margin-bottom: 40px; 
+            border-bottom: 2px solid var(--secondary); 
+            display: inline-block; 
+            width: 100%; 
+            padding-bottom: 15px; 
+            text-transform: uppercase;
+        }
 
         /* Photo Gallery Grid */
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; }
-        .photo-card { background: white; padding: 10px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
-        .photo-card img { width: 100%; height: 250px; object-fit: cover; border-radius: 3px; background: #ddd; }
-        .photo-card p { margin-top: 10px; font-weight: bold; color: var(--accent); }
+        .gallery-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 20px; 
+        }
+        .photo-card { 
+            background: var(--white); 
+            padding: 10px; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+            transition: transform 0.3s ease;
+        }
+        .photo-card:hover {
+            transform: translateY(-5px);
+        }
+        .photo-card img { 
+            width: 100%; 
+            height: 250px; 
+            object-fit: cover; 
+            border-radius: 5px; 
+            background: #eee; 
+            display: block;
+        }
+        .photo-card p { 
+            margin: 15px 0 5px 0; 
+            font-weight: bold; 
+            color: var(--primary); 
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
 
-        footer { text-align: center; padding: 20px; background: #ddd; margin-top: 40px; font-size: 0.9rem; }
+        /* Bottom Contact Banner */
+        .themed-bg { 
+            background: linear-gradient(rgba(0, 45, 98, 0.75), rgba(44, 62, 80, 0.75)), 
+                        url('construccion2.jpg'); 
+            background-size: cover;
+            background-position: center;
+            color: white; 
+            text-align: center;
+            padding: 60px 20px;
+            border-top: 5px solid var(--secondary);
+        }
+        .themed-bg h3 { font-size: 2.2rem; text-transform: uppercase; margin-bottom: 15px; }
+        .btn { padding: 15px 30px; text-decoration: none; font-weight: bold; border-radius: 5px; transition: 0.3s; display: inline-block; text-transform: uppercase; background: var(--secondary); color: white; border: none; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.4); }
+
+        footer { text-align: center; padding: 40px 20px; background: #e2e8f0; font-size: 0.9rem; color: #4a5568; }
     </style>
 </head>
 <body>
@@ -32,6 +106,7 @@
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
     <a href="photos.html">Photos</a>
+    <a href="quote.html">Get a Quote</a>
 </nav>
 
 <header>
@@ -39,29 +114,43 @@
 </header>
 
 <div class="container">
-    <h3>Our Recent Work</h3>
+    <h2>Our Recent Work</h2>
     <div class="gallery-grid">
         <div class="photo-card">
-            <img src="https://via.placeholder.com/400x300?text=Mobile+Home+Turnover" alt="Project 1">
-            <p>Mobile Home Turnover</p>
+            <img src="photo1.jpg" alt="Mobile Home Repair">
+            <p>Mobile Home Community Services</p>
         </div>
         <div class="photo-card">
-            <img src="https://via.placeholder.com/400x300?text=Retail+Storefront" alt="Project 2">
-            <p>Retail Storefront Repair</p>
+            <img src="photo2.jpg" alt="Commercial Maintenance">
+            <p>Commercial Property Maintenance</p>
         </div>
         <div class="photo-card">
-            <img src="https://via.placeholder.com/400x300?text=ADA+Compliance" alt="Project 3">
-            <p>ADA Ramp Installation</p>
+            <img src="photo3.jpg" alt="Turnkey Solution">
+            <p>Retail Unit Turnovers</p>
         </div>
         <div class="photo-card">
-            <img src="https://via.placeholder.com/400x300?text=Office+Remodel" alt="Project 4">
-            <p>Office Interior Remodel</p>
+            <img src="photo4.jpg" alt="Construction Project">
+            <p>Tenant Improvements</p>
+        </div>
+        <div class="photo-card">
+            <img src="photo5.jpg" alt="Safety Upgrades">
+            <p>ADA & Safety Compliance</p>
+        </div>
+        <div class="photo-card">
+            <img src="photo6.jpg" alt="General Repair">
+            <p>On-Call Emergency Repairs</p>
         </div>
     </div>
 </div>
 
+<section class="themed-bg">
+    <h3>Ready for Professional Results?</h3>
+    <p>Let Jesus and the team handle your property needs.</p>
+    <a href="quote.html" class="btn">Get a Quote Today</a>
+</section>
+
 <footer>
-    <p>&copy; 2026 FXR Construction Inc. | Central Valley Turnkey Services (CVTS)</p>
+    <p>&copy; 2026 Central Valley Turnkey Services | FXR Construction Inc. License #1005035</p>
 </footer>
 
 </body>
