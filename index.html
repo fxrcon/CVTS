@@ -21,24 +21,24 @@
             line-height: 1.6; 
         }
         
-        /* Navigation */
-        nav { background: #1a1a1a; padding: 15px; text-align: center; }
-        nav a { color: white; text-decoration: none; margin: 0 20px; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
+        /* Navigation Styles */
+        nav { background: #1a1a1a; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
         nav a:hover { color: var(--secondary); }
 
         /* Branding Header */
         header { 
             background: var(--primary); 
             color: white; 
-            padding: 35px 20px; 
+            padding: 30px 20px; 
             text-align: center; 
             border-bottom: 5px solid var(--secondary); 
         }
-        header h1 { margin: 0; font-size: 2.2rem; letter-spacing: 1px; }
+        header h1 { margin: 0; font-size: 2.2rem; letter-spacing: 1px; text-transform: uppercase; }
         .legal-sub { font-size: 0.9rem; color: #cbd5e0; margin-top: 5px; font-weight: normal; }
-        .license { font-size: 0.75rem; color: #a0aec0; display: block; margin-top: 2px; }
+        .license { font-size: 0.75rem; color: #a0aec0; display: block; margin-top: 2px; text-transform: uppercase; }
         
-        /* THEMED SECTIONS (Top & Bottom) */
+        /* THEMED SECTIONS (Top Hero & Bottom Contact) */
         .themed-bg { 
             background: linear-gradient(rgba(0, 45, 98, 0.75), rgba(44, 62, 80, 0.75)), 
                         url('construccion2.jpg'); 
@@ -62,35 +62,41 @@
         .themed-bg p { 
             font-size: 1.2rem; 
             text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        /* Services Content */
-        .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
+        /* Services Grid Content */
+        .container { max-width: 1100px; margin: auto; padding: 50px 20px; }
         .section-title { 
             color: var(--primary); 
             text-align: center; 
             font-size: 1.8rem; 
-            margin-bottom: 30px; 
+            margin-bottom: 40px; 
             border-bottom: 2px solid var(--secondary); 
             display: inline-block; 
             width: 100%; 
-            padding-bottom: 10px; 
+            padding-bottom: 15px; 
+            text-transform: uppercase;
         }
         
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
-        .card { background: var(--white); padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .card h4 { color: var(--secondary); margin-top: 0; font-size: 1.3rem; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        .card ul { padding-left: 20px; list-style-type: square; margin: 0; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+        .card { background: var(--white); padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-top: 4px solid var(--primary); }
+        .card h4 { color: var(--secondary); margin-top: 0; font-size: 1.4rem; border-bottom: 1px solid #eee; padding-bottom: 10px; text-transform: uppercase; }
+        .card ul { padding-left: 20px; list-style-type: square; margin: 15px 0 0 0; }
+        .card li { margin-bottom: 8px; }
         
         /* Buttons */
         .btn-group { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-        .btn { padding: 14px 28px; text-decoration: none; font-weight: bold; border-radius: 5px; transition: 0.3s; display: inline-block; font-size: 1rem; }
+        .btn { padding: 15px 30px; text-decoration: none; font-weight: bold; border-radius: 5px; transition: 0.3s; display: inline-block; font-size: 1rem; text-transform: uppercase; }
         .btn-orange { background: var(--secondary); color: white; border: none; }
         .btn-outline { background: transparent; color: white; border: 2px solid white; }
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 4px 15px rgba(0,0,0,0.4); }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.4); background-color: #e67e22; border-color: #e67e22; }
+        .btn-outline:hover { color: white; }
         
-        footer { text-align: center; padding: 30px; background: #ddd; font-size: 0.9rem; }
+        footer { text-align: center; padding: 40px 20px; background: #e2e8f0; font-size: 0.9rem; color: #4a5568; }
     </style>
 </head>
 <body>
@@ -99,21 +105,22 @@
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
     <a href="photos.html">Photos</a>
+    <a href="quote.html">Get a Quote</a>
 </nav>
 
 <header>
-    <h1>CENTRAL VALLEY TURNKEY SERVICES</h1>
-    <div class="legal-sub">A Division of FXR Construction Inc. </div>
+    <h1>Central Valley Turnkey Services</h1>
+    <div class="legal-sub">A Division of FXR Construction Inc.</div>
     <div class="license">CSLB License #1005035</div>
 </header>
 
 <section class="themed-bg hero">
-    <div style="max-width: 800px; margin: auto;">
+    <div style="max-width: 850px; margin: auto;">
         <h2>Turnkey Solutions</h2>
-        <p>Reliable. Responsive. Contractor-Built. </p>
+        <p>Professional property maintenance and repairs for commercial and multi-unit communities. Reliable. Responsive. Contractor-Built.</p>
         <div class="btn-group">
-            <a href="tel:4087699928" class="btn btn-orange">CALL OFFICE: (408) 769-9928</a>
-            <a href="mailto:info@fxrcon.com" class="btn btn-outline">EMAIL REQUEST</a>
+            <a href="tel:4087699928" class="btn btn-orange">Call Office</a>
+            <a href="quote.html" class="btn btn-outline">Get a Quote</a>
         </div>
     </div>
 </section>
@@ -124,28 +131,28 @@
         <div class="card">
             <h4>Mobile Home Communities</h4>
             <ul>
-                <li>Vacant Unit Turnovers & Move-In Prep </li>
-                <li>Skirting, Deck & Handrail Repairs </li>
-                <li>ADA Accessibility & Code Compliance </li>
-                <li>Flooring, Kitchen & Interior Upgrades </li>
+                <li>Vacant Unit Turnovers & Move-In Prep</li>
+                <li>Skirting, Deck & Handrail Repairs</li>
+                <li>ADA Accessibility & Code Compliance</li>
+                <li>Flooring, Kitchen & Interior Upgrades</li>
             </ul>
         </div>
         <div class="card">
             <h4>Retail & Strip Malls</h4>
             <ul>
-                <li>Storefront Repairs & Lock Changes </li>
-                <li>Interior Paint & Drywall </li>
-                <li>Graffiti Removal & Pressure Washing </li>
-                <li>After-Hours Emergency Response </li>
+                <li>Storefront Repairs & Lock Changes</li>
+                <li>Interior Paint & Drywall</li>
+                <li>Graffiti Removal & Pressure Washing</li>
+                <li>After-Hours Emergency Response</li>
             </ul>
         </div>
         <div class="card">
             <h4>Commercial & Office Units</h4>
             <ul>
-                <li>Unit Turnovers & Tenant Improvements </li>
-                <li>Plumbing Repairs & Utility Fixtures </li>
-                <li>Common Area Maintenance & Safety Railings </li>
-                <li>Preventive & Emergency Maintenance </li>
+                <li>Unit Turnovers & Tenant Improvements</li>
+                <li>Plumbing Repairs & Utility Fixtures</li>
+                <li>Common Area Maintenance & Safety Railings</li>
+                <li>Preventive & Emergency Maintenance</li>
             </ul>
         </div>
     </div>
@@ -153,17 +160,18 @@
 
 <section class="themed-bg contact-footer">
     <div style="max-width: 800px; margin: auto;">
-        <h3>Get Started Today</h3>
-        <p>Serving San Jose, Modesto, and the Central Valley </p>
-        <p><strong>Office: (408) 769-9928</strong> | <strong>Email: info@fxrcon.com</strong> </p>
+        <h3>Ready to Start Your Project?</h3>
+        <p>Serving San Jose, Modesto, and the entire Central Valley area with professional, licensed construction services.</p>
+        <p style="font-weight: bold;">Office: (408) 769-9928 | Email: info@fxrcon.com</p>
         <div class="btn-group">
-            <a href="mailto:info@fxrcon.com" class="btn btn-orange">EMAIL US NOW</a>
+            <a href="quote.html" class="btn btn-orange">Request Your Quote Now</a>
         </div>
     </div>
 </section>
 
 <footer>
     <p>&copy; 2026 Central Valley Turnkey Services | FXR Construction Inc. License #1005035</p>
+    <p style="font-size: 0.75rem; margin-top: 10px;">Licensed General Contractor providing commercial maintenance and residential turnkey solutions.</p>
 </footer>
 
 </body>
